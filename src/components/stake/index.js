@@ -32,9 +32,6 @@ function ComponentStake() {
 
     const onClickStake = async () => 
     {
-        console.log(account)
-        console.log(chainId)
-        console.log(library)
 
         if (account && chainId && library) {
             

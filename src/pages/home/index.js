@@ -6,6 +6,7 @@ import Header from "../../components/header";
 import ComponentIntroduction from "../../components/introduction";
 import ComponentStake from '../../components/stake';
 import ComponentDetail from '../../components/detail';
+import ComponentFooter from '../../components/footer';
 // import WalletConnect from "../../components/";
 
 
@@ -20,6 +21,7 @@ function Home() {
                 <ComponentIntroduction />
                 <ComponentStake />
                 <ComponentDetail />
+                <ComponentFooter />
             </div>
     );
 }

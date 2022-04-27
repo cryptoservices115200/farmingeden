@@ -9,7 +9,7 @@ function Header() {
     return (
         <div className="container">
             <nav className="navbar navbar-expand-lg">
-                <Link to="/"><img src={Logo} alt="logo" style={{ width: "75px" }} className="img-fluid" /></Link>
+                <Link to="/"><img src={Logo} alt="logo" style={{ width: "75px", marginLeft:'50px' }} className="img-fluid" /></Link>
                 <button className="navbar-toggler navbar-toggler-main" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">

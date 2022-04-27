@@ -1,12 +1,15 @@
 import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 
+const pumpkin = 'images/pumpkin.png';
+
 function ComponentDetail() {
     return (
         <div className="masthead">
             <Container>
                 <Row>
-                    <Col lg={3}></Col>
+                    <Col lg={3}>
+                    </Col>
                     <Col lg={6}>
                         <div className='stakeDetail'>
                             <div className='stakeDetailText'>

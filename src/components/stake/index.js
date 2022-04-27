@@ -27,26 +27,30 @@ function ComponentStake() {
 
     const onChangeStakeAmount = async (e) => 
     {
-        console.log(e.target.value);
         setStakeValue(e.target.value);
     }
 
     const onClickStake = async () => 
     {
-        alert(stakeValue);
-        // if (account && chainId && library) {
+        console.log(account)
+        console.log(chainId)
+        console.log(library)
 
-        //     setLoading(true)
-        //     const { ethereum } = window;
+        if (account && chainId && library) {
+            
+
+
+            setLoading(true)
+            const { ethereum } = window;
       
-        //     web3 = new Web3(library.provider)
-        //     const provider = new ethers.providers.Web3Provider(ethereum);
-        //     const signer = provider.getSigner();
-        //     console.log(signer);
-        //     console.log('signersignersignersignersigner');
-        //     // contractObject2 = new web3.eth.Contract(metadata2, addr2);
-        //     contractObject1 = new ethers.Contract(addr, metadata, signer);
-        // }
+            web3 = new Web3(library.provider)
+            const provider = new ethers.providers.Web3Provider(ethereum);
+            const signer = provider.getSigner();
+            contractObject1 = new ethers.Contract(addr, metadata, signer);
+            let balance  = await contractObject1.hatchEggs(account);
+            console.log(balance);
+
+        }
     }
 
     return (
@@ -56,9 +60,9 @@ function ComponentStake() {
                     <Col lg={3}></Col>
                     <Col lg={6}>
                         <div className='stakeWood'>
-                            <input type="text" onChange = {onChangeStakeAmount} style={{ fontSize:'25px', textAlign:'center', width:'70%', margin:'17% 15% 0 15%', border:'1px solid black'}} />
+                            <input type="text" onChange = {onChangeStakeAmount} style={{ fontSize:'20px', textAlign:'center', width:'70%', margin:'14% 15% 0 15%', border:'1px solid black'}} />
                             <button className="mint-number-button" onClick={onClickStake} >Sowing</button>
-                            <p style={{margin:'5px 25%', fontSize:'30px'}}>Rewards: 0.00 BNB</p>
+                            <p style={{margin:'7% 29%', fontSize:'35px'}}>Rewards: 0.00 BNB</p>
                             <div className='stakeButtonGroup'>
                                 <button className="s_button">Re-sowing</button>
                                 <button className="s_button">Harvest</button>

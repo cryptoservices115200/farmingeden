@@ -31,7 +31,7 @@ export const CONTRACTS = {
 
   [CONTRACTS_TYPE.BAKED_BEANS]: {
     1: { address: '0xec213aa2763a31dfb3f3c2b0aad7baca7f071715', abi: bakedBeans.abi },
-    4: { address: "0xec213aa2763a31dfb3f3c2b0aad7baca7f071715", abi: bakedBeans.abi },
+    4: { address: "0xec213Aa2763A31dFb3f3c2b0aAD7BAca7F071715", abi: bakedBeans.abi },
     56: { address: '', abi: '' },
     97: { address: '0xec213aa2763a31dfb3f3c2b0aad7baca7f071715', abi: bakedBeans.abi },
   },

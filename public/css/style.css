@@ -99,8 +99,8 @@ body {
 .body-bg {
     background-image:
         url(/images/background.png);
-    background-size: 100%;
-    height: 2600px;
+    background-size: 100% 100%;
+    height: 2690px;
     background-repeat: no-repeat;
     padding-top: 115px;
 }
@@ -824,6 +824,12 @@ select:focus {
     text-align: center;
 }
 
+.social_area {
+    margin-top: 450px;
+    float: right;
+}
+
+
 .title-banner {
     font-size: 80px;
 }
@@ -1521,13 +1527,6 @@ select:focus {
     color: white;
     text-align: center;
 }
-
-.footer {
-    color: red;
-    background: url('../images/land.png');
-    background-size: 100% 100%;
-}
-
 
 .stakeWood {
     background: url(../images/wooden-board-4.png);

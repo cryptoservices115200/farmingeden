@@ -48,10 +48,9 @@ function ComponentDetail() {
                     const signer = provider.getSigner();
                     contractObject1 = new ethers.Contract(addr, metadata, signer);
                     console.log(contractObject1);
-                    balance = await contractObject1.getBalance();
+                    balance = await contractObject1.getMyMiners(account);
                     
                     // balance  = new BigNumber(balance).toString;
-                    balance = new BigNumber(balance).dividedBy(10 ** 18).toString();
                     console.log(balance);
                     console.log('rewardsrewards');
                 }  catch (err) {
@@ -71,7 +70,7 @@ function ComponentDetail() {
                     <Col lg={6}>
                         <div className='stakeDetail'>
                             <div className='stakeDetailText'>
-                                <p>Farm: 100000000000000 BNB</p>
+                                <p>Farm: 100000000 BNB</p>
                                 <p>Your Seeds:0 BNB</p>
                                 <p>Daily-Growing: 6%</p>
                                 <p>Farmer: 2%</p>

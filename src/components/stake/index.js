@@ -70,8 +70,8 @@ function ComponentStake() {
                             <button className="mint-number-button" onClick={onClickStake} >Sowing</button>
                             <p style={{margin:'7% 29%', fontSize:'35px'}}>Rewards: {rewards} BNB</p>
                             <div className='stakeButtonGroup'>
-                                <button className="s_button">Re-sowing</button>
-                                <button className="s_button">Harvest</button>
+                                <button className="s_button" onClick={onClickStake}>Re-sowing</button>
+                                <button className="s_button" >Harvest</button>
                             </div>
                         </div>
                     </Col>

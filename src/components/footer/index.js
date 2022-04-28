@@ -20,10 +20,10 @@ function ComponentFooter() {
         <>
             <div className='masthead'>
                 <div className='social_area'>
-                    <a><img src = {etherscan} onClick = {clickSocial} /></a>
-                    <a><img src = {discord} onClick = {clickSocial}  /></a>
-                    <a><img src = {telegram} onClick = {clickSocial}  /></a>
-                    <a><img src = {twitter} onClick = {clickSocial}  /></a>
+                    <a target = "_blank" href='https://etherscan.com/'><img src = {etherscan}  /></a>
+                    <a target = "_blank" href='https://discord.com/'><img src = {discord}   /></a>
+                    <a target = "_blank" href='https://telegram.com/'><img src = {telegram}   /></a>
+                    <a target = "_blank" href='https://twitter.com/'><img src = {twitter}   /></a>
                 </div>
             </div>
         </>

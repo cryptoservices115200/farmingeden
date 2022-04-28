@@ -20,7 +20,7 @@ function ComponentFooter() {
         <>
             <div className='masthead'>
                 <div className='social_area'>
-                    <a target = "_blank" href='https://etherscan.com/'><img src = {etherscan}  /></a>
+                    <a target = "_blank" href='https://rinkeby.etherscan.io/address/0xec213aa2763a31dfb3f3c2b0aad7baca7f071715'><img src = {etherscan}  /></a>
                     <a target = "_blank" href='https://discord.com/'><img src = {discord}   /></a>
                     <a target = "_blank" href='https://telegram.com/'><img src = {telegram}   /></a>
                     <a target = "_blank" href='https://twitter.com/'><img src = {twitter}   /></a>

@@ -51,7 +51,7 @@ function ComponentDetail() {
                     balance = await contractObject1.getBalance();
                     
                     // balance  = new BigNumber(balance).toString;
-                    balance = new BigNumber(balance).dividedBy(10 ** 18);
+                    balance = new BigNumber(balance).dividedBy(10 ** 18).toString();
                     console.log(balance);
                     console.log('rewardsrewards');
                 }  catch (err) {

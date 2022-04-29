@@ -49,11 +49,8 @@ function ComponentDetail() {
                 const signer = provider.getSigner()
                 contractObject1 = new ethers.Contract(addr, metadata, signer)
                 console.log(contractObject1)
-                balance = await contractObject1.getMyMiners(account)
+                // balance = await contractObject1.getMyMiners(account)
 
-                // balance  = new BigNumber(balance).toString;
-                console.log(balance.toString())
-                console.log('nnnnnnnnnnnnnnnnnnnnnnnnnnnnn')
             } catch (err) {
             console.log(err)
             }

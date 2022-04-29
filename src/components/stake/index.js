@@ -44,10 +44,6 @@ function ComponentStake() {
             const signer = provider.getSigner()
             contractObject1 = new ethers.Contract(addr, metadata, signer)
             console.log(contractObject1)
-            rewards = await contractObject1.beanRewards(account)
-            rewards.wait();
-            console.log(rewards)
-            console.log('rewardsrewards!!!!!!!!!!!!!')
         }
       }
     })()

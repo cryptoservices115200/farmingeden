@@ -2534,7 +2534,9 @@ html.open-nav{
     }
 
     .s_button {
+        /* width: 120px; */
         font-size: 27px;
+
     }
 
     .roadmap-tab-header .nav-tabs .nav-item + .nav-item {
@@ -2552,6 +2554,21 @@ html.open-nav{
 }
 
 @media (max-width: 479px) {
+
+    .social_area {
+        width: 100%;
+        margin-top: 650px;
+        float: right;
+    }
+
+    /* .social_area > a {
+        width: 40px;
+    } */
+
+    .social_area img {
+        width: 77px !important;
+    }
+
     .vanguardDetail > div:nth-child(1) {
         right: 43%;
     }

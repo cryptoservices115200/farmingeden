@@ -24,7 +24,7 @@ const WalletConnect = () => {
       width: '20%',
       height: '500px',
       borderRadius: '15px',
-      background: 'rgba(0, 0, 0, 0.95)',
+      background: 'rgba(100, 120, 80, 0.95)',
       paddingTop: '10px',
       minWidth:'250px', 
     },
@@ -36,7 +36,35 @@ const WalletConnect = () => {
   const [isOpen, setOpen] = useState(false)
   const { account, chainId, activate, deactivate } = useWeb3React();
   const supportNetworkId = 4;
-  console.log(chainId);
+
+
+  useEffect(() => {
+		(async () => {
+      if (account ) {
+              
+
+        if (supportNetworkId !== chainId) {
+          if(window.confirm("Your current Network is unsupportable. Would you like to change it") == true)
+          {
+            console.log(supportNetworkId.toString(16));
+            try {
+              await window.ethereum.request({
+                method: 'wallet_switchEthereumChain',
+                  params: [{ chainId: '0x' + supportNetworkId.toString(16)}],
+                });
+            } catch (switchError) {
+              if (switchError.code === 4902) {
+                alert('add this chain id')
+              }
+            }
+          }
+        }
+
+			}
+		})();
+	}, [account, chainId]);
+
+
   const walletModalOpen = async () => {
     setOpen(true)
   }

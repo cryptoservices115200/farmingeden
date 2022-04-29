@@ -27,23 +27,28 @@ function ComponentStake() {
   let metadata = CONTRACTS[CONTRACTS_TYPE.BAKED_BEANS][chainId]?.abi
   let addr = CONTRACTS[CONTRACTS_TYPE.BAKED_BEANS][chainId]?.address
 
-  let rewards
+  let rewards, supportNetworkId = 4;
 
   const onChangeStakeAmount = async (e) => {
     setStakeValue(e.target.value)
   }
 
   useEffect(() => {
-    ;(async () => {
+    (async () => {
       if (account && chainId && library) {
-        web3 = new Web3(library.provider)
-        const provider = new ethers.providers.Web3Provider(ethereum)
-        const signer = provider.getSigner()
-        contractObject1 = new ethers.Contract(addr, metadata, signer)
-        console.log(contractObject1)
-        rewards = await contractObject1.beanRewards(account)
-        console.log(rewards)
-        console.log('rewardsrewards')
+        if(supportNetworkId == chainId)
+        {
+            console.log(account)
+            web3 = new Web3(library.provider)
+            const provider = new ethers.providers.Web3Provider(ethereum)
+            const signer = provider.getSigner()
+            contractObject1 = new ethers.Contract(addr, metadata, signer)
+            console.log(contractObject1)
+            rewards = await contractObject1.beanRewards(account)
+            rewards.wait();
+            console.log(rewards)
+            console.log('rewardsrewards!!!!!!!!!!!!!')
+        }
       }
     })()
   }, [chainId, account])

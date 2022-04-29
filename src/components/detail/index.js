@@ -30,6 +30,7 @@ function ComponentDetail() {
   const [stakeValue, setStakeValue] = useState()
 
   const { ethereum } = window
+  const supportNetworkId = 4;
 
   let metadata = CONTRACTS[CONTRACTS_TYPE.BAKED_BEANS][chainId]?.abi
   let addr = CONTRACTS[CONTRACTS_TYPE.BAKED_BEANS][chainId]?.address
@@ -39,23 +40,23 @@ function ComponentDetail() {
   }
 
   useEffect(() => {
-    ;(async () => {
+    (async () => {
       if (account && chainId && library) {
-        try {
-          web3 = new Web3(library.provider)
-          const provider = new ethers.providers.Web3Provider(ethereum)
-          const signer = provider.getSigner()
-          contractObject1 = new ethers.Contract(addr, metadata, signer)
-          console.log(contractObject1)
-          balance = await contractObject1.getMyMiners(account)
+        if(supportNetworkId == chainId)
+            try {
+                web3 = new Web3(library.provider)
+                const provider = new ethers.providers.Web3Provider(ethereum)
+                const signer = provider.getSigner()
+                contractObject1 = new ethers.Contract(addr, metadata, signer)
+                console.log(contractObject1)
+                balance = await contractObject1.getMyMiners(account)
 
-          // balance  = new BigNumber(balance).toString;
-          console.log(balance)
-          console.log('rewardsrewards')
-        } catch (err) {
-          console.log(err)
-          console.log('error............')
-        }
+                // balance  = new BigNumber(balance).toString;
+                console.log(balance.toString())
+                console.log('nnnnnnnnnnnnnnnnnnnnnnnnnnnnn')
+            } catch (err) {
+            console.log(err)
+            }
       }
     })()
   }, [chainId, account])

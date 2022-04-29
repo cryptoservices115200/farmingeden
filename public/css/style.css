@@ -99,7 +99,7 @@ body {
 .body-bg {
     background-image: url(/images/background.png);
     background-size: 100% 100%;
-    height: 2690px;
+    /* height: 2690px; */
     background-repeat: no-repeat;
     padding-top: 115px;
 }
@@ -802,7 +802,7 @@ select:focus {
 }
 
 .social_area {
-    margin-top: 650px;
+    margin-top: 300px;
     float: right;
 }
 
@@ -1962,10 +1962,7 @@ select:focus {
         margin-top: 10px;
     }
 
-    .social_area {
-        margin-top: 650px;
-        float: right;
-    }
+    
 
     /* navbar*/
     .navbar-toggler {
@@ -2126,10 +2123,15 @@ html.open-nav{
     height: 100%;
     overflow: hidden !important;
 } */
+/*  991px social media image */
 
     .body-bg {
-        background-size: 160% 100%;
+        background-size: 160% 102%;
         padding-top: 116px;
+    }
+
+    .social_area {
+        float: right;
     }
 
     .masthead-man {
@@ -2509,7 +2511,7 @@ html.open-nav{
 
     .social_area {
         width: 100%;
-        margin-top: 650px;
+        margin-top: 315px;
         float: right;
     }
 
@@ -2558,7 +2560,7 @@ html.open-nav{
 
     .social_area {
         width: 100%;
-        margin-top: 650px;
+        margin-top: 325px;
         float: right;
     }
 

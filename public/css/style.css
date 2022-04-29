@@ -2128,6 +2128,7 @@ html.open-nav{
 } */
 
     .body-bg {
+        background-size: 160% 100%;
         padding-top: 116px;
     }
 

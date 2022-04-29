@@ -802,7 +802,7 @@ select:focus {
 }
 
 .social_area {
-    margin-top: 450px;
+    margin-top: 650px;
     float: right;
 }
 
@@ -1958,6 +1958,11 @@ select:focus {
     }
     .stakeButtonGroup {
         margin-top: 10px;
+    }
+
+    .social_area {
+        margin-top: 650px;
+        float: right;
     }
 
     /* navbar*/

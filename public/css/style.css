@@ -2250,6 +2250,7 @@ html.open-nav{
         font-size: 30px;
     }
 
+
     .stakeDetail {
         width: 500px;
         min-width: 500px;
@@ -2278,11 +2279,11 @@ html.open-nav{
         font-size: 12px;
     }
 
-    .body-bg {
+    /* .body-bg {
         background-image: none;
         background-size: cover;
         padding-top: 80px;
-    }
+    } */
 
     .vanguardDetail > div:nth-child(1) {
         right: 47%;

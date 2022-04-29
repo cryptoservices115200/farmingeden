@@ -2504,6 +2504,16 @@ html.open-nav{
         background-size: contain;
     }
 
+    .social_area {
+        width: 100%;
+        margin-top: 650px;
+        float: right;
+    }
+
+    .social_area > a {
+        width: 60px;
+    }
+
     .stake_input {
         margin-top: 78px;
         height: 30px;

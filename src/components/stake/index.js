@@ -87,3 +87,4 @@ function ComponentStake() {
 }
 
 export default ComponentStake
+
